@@ -16,7 +16,9 @@ export default function Card({
                 <div className="mt-2">
                     <p className="text-sm overflow-hidden line-clamp-2">{overview}</p>
                 </div>
-                <p className="flex items-center justify-center md:justify-start mt-2"><AiTwotoneStar /> {popularity}</p>
+                <p className="flex items-center justify-center md:justify-start mt-2">
+                    <AiTwotoneStar className="text-yellow-500" /> {popularity}
+                </p>
             </div>
         </div>
     );
