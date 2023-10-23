@@ -17,6 +17,7 @@ export default function MovieDetailPage() {
 
   // Tampilkan informasi film, ulasan, dan karakter
   return (
+    
     <div>
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex space-x-2">
@@ -41,9 +42,6 @@ export default function MovieDetailPage() {
         </div>
         </div>
         <h1 className="text-2xl font-bold mb-4">Sipnosis</h1>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.
       <h1>{movieData.title}</h1>
       <p>Overview: {movieData.overview}</p>
       {/* Tampilkan ulasan di sini */}
@@ -53,5 +51,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       <h1 className="text-2xl font-bold mb-4">Movie info</h1>
       
     </div>
+    
   );
 }

@@ -35,7 +35,7 @@ export default function ListMovie() {
 
     return (
         <>
-        <Carousel
+       <Carousel
   showArrows={true}
   showStatus={false}
   showThumbs={false}
@@ -43,11 +43,12 @@ export default function ListMovie() {
   selectedItem={1} // Adjust the initial selected item as needed
   centerMode={true}
   centerSlidePercentage={100} // Set to 100 to center the selected item
-  className="max-w-screen-xl mx-auto"
+  className="max-w-screen-2xl mx-auto" // Increase the maximum width
+  style={{ width: "80%", margin: "0 auto" }} // Set the width and center the carousel
 >
   {data?.results?.map((item, index) => (
     <Link href={`/movie/${item.id}`} key={item.id}>
-      <div className="bg-white p-4 shadow-md rounded-lg">
+      <div className="bg-white p-4 shadow-md rounded-lg" style={{ width: "100%", height: "auto" }}>
         <div className="banner-wrapper">
           <img
             src="https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-04.jpg"
@@ -59,9 +60,6 @@ export default function ListMovie() {
     </Link>
   ))}
 </Carousel>
-
-
-
 
         <h1 className="text-2xl font-bold mb-4">Browse by category</h1>
      <div className="flex flex-col lg:flex-row items-center">
@@ -163,5 +161,3 @@ export default function ListMovie() {
     </>
   );
 };
-        
-   

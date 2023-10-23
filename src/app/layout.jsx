@@ -56,14 +56,14 @@ export default function RootLayout({ children }) {
                     <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" className="w-4 md:w-5" />
                     <div className="text-left">
                       <p className="text-xs text-gray-200">Download on</p>
-                      <p className="text-xxs md:text-xs">Google Play Store</p>
+                      <p className="text-xxs md:text-xs text-white">Google Play Store</p>
                     </div>
                   </div>
                   <div className="flex items-center border rounded-lg px-1 py-1 space-x-1 mx-2">
                     <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" className="w-4 md:w-5" />
                     <div className="text-left">
                       <p className="text-xs text-gray-200">Download on</p>
-                      <p className="text-xxs md:text-xs">Apple Store</p>
+                      <p className="text-xxs md:text-xs text-white">Apple Store</p>
                     </div>
                   </div>
                 </div>
