@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { AiFillYoutube } from 'react-icons/ai';

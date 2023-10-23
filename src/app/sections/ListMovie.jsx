@@ -104,9 +104,6 @@ export default function ListMovie() {
   </div>
 </div>
 
-
-
-
 <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 justify-center sm:justify-around gap-5">
   {data?.results?.map((item, index) => (
     <Link href={`/movie/${item.id}`} key={item.id}>
@@ -154,7 +151,6 @@ export default function ListMovie() {
     </li>
   </ul>
 </div>
-
 
     <div className="flex justify-center gap-32   mt-10">
     </div>
