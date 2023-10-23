@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-<h1>SMKDEV FINAL PROJECT <br />WARNING PROJECT INI BELUM RESPONSIF DI MOBILE</h1>h1>
+<h1>SMKDEV FINAL PROJECT <br />WARNING PROJECT INI BELUM RESPONSIF DI MOBILE</h1>
 
 ## Getting Started
 
