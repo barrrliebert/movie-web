@@ -50,9 +50,9 @@ export default function RootLayout({ children }) {
               </div>
               <div>
                 <span className="text-base font-bold tracking-wide text-white">Download</span>
-                <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2]">
-                  <img src="google play 1.png" alt="Google PlayStore" className='h-14'/>       
-                  <img src="apple store 1.png" alt="App Store " className='h-14 mt-1'/>
+                <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2] ">
+                  <img src="google play 1.png" alt="Google PlayStore" className='h-14 flex-shrink-0'/>       
+                  <img src="apple store 1.png" alt="App Store " className='h-14 mt-1 flex-shrink-0'/>
                 </div>
 
                
