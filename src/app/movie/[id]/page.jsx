@@ -2,7 +2,6 @@
 import { useParams } from 'next/navigation';
 import { useGetDetailMovie } from '@/hooks/useMovies';
 import { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function MovieDetailPage() {
@@ -16,19 +15,10 @@ export default function MovieDetailPage() {
     return <p>Loading...</p>;
   }
 
-  const movieItems = [
-    {
-      title: movieData.title,
-      rating: "8.5", // Replace with the actual rating
-      review: "123 Reviews", // Replace with the actual number of reviews
-    },
-    // Add more movie items as needed
-  ];
-
   return (
-    <main>
+    <main className="container mx-auto mt-10 relative">
         
-        <div className="relative w-full px-[5rem] lg:px-[10rem] py-[5rem] h-max text-left text-17xl text-white font-roboto  bg-cover " style={{ backgroundImage: 'url(https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-04.jpg)' }}>
+        <div className="relative w-full px-[5rem] lg:px-[10rem] py-[5rem] h-max text-left text-17xl text-white font-roboto bg-cover " style={{ backgroundImage: 'url(https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-04.jpg)' }}>
 
                 <div className="flex flex-col items-start justify-center">
                 <div className=" text-[30px] sm:text-[50px] lg:text-[70px] font-black w-[70%]">
@@ -154,6 +144,19 @@ export default function MovieDetailPage() {
                 <p>{movieData.director}</p>
                 </div>
     
+                <div>
+                <p className="text-xl font-semibold">Featured song:</p>
+                <p>{movieData.featured_song}</p>
+                </div>
+                <div>
+                <p className="text-xl font-semibold">Release date:</p>
+                <p>{movieData.release_date}</p>
+                </div>
+    
+    
+        
+    
+                
                 <div className="flex justify-center gap-32   mt-10"></div>
             </div>
             </div>

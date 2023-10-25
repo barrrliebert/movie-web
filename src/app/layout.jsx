@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <AiFillYoutube className="text-red-500 w-20 h-20" />
                 <div className="mt-6 lg:max-w-sm">
                   <p className="text-sm text-white">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
                   </p>
                 </div>
               </div>
@@ -48,19 +48,26 @@ export default function RootLayout({ children }) {
                   <p className="mr-1 text-white">Karir</p>
                 </div>
               </div>
-             
               <div>
   <span className="text-base font-bold tracking-wide text-white">Download</span>
-  <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2">
-    <div style="width: 100px; height: auto;">
-      <img src="google play 1.png" alt="Google PlayStore" className='h-14 flex-shrink-0 w-full'/>       
+  <div className="flex my-2">
+    <div className="flex items-center border rounded-lg px-1 py-1 space-x-1 mx-2 ml-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" className="w-4 md:w-5" />
+      <div className="text-left">
+        <p className="text-xs text-gray-200">Download on</p>
+        <p className="text-xxs md:text-xs text-white">Google Play Store</p>
+      </div>
     </div>
-    <div style="width: 100px; height: auto;">
-      <img src="apple store 1.png" alt="App Store" className='h-14 mt-1 flex-shrink-0 w-full'/>
+    <div className="flex items-center border rounded-lg px-2 py-2 space-x-1 mx-1 ml-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" className="w-3 md:w-4" />
+      <div className="text-left">
+        <p className="text-xs text-gray-200">Download on</p>
+        <p className="text-xxs md:text-xs text-white">Apple Store</p>
+      </div>
     </div>
   </div>
-</div>
 
+ 
                
                 <p className="text-base font-bold tracking-wide text-white mt-3">Social media</p>
                 <div className="flex items-center mt-1 space-x-3">
