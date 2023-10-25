@@ -28,7 +28,7 @@ export default function MovieDetailPage() {
   return (
     <main>
         
-        <div className="relative w-full px-[5rem] lg:px-[10rem] py-[5rem] h-max text-left text-17xl text-white font-roboto bg-transparent sm:bg-opacity-100 bg-cover " style={{ backgroundImage: 'url(https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-04.jpg)' }}>
+        <div className="relative w-full px-[5rem] lg:px-[10rem] py-[5rem] h-max text-left text-17xl text-white font-roboto  bg-cover " style={{ backgroundImage: 'url(https://collider.com/wp-content/uploads/the-avengers-movie-poster-banners-04.jpg)' }}>
 
                 <div className="flex flex-col items-start justify-center">
                 <div className=" text-[30px] sm:text-[50px] lg:text-[70px] font-black w-[70%]">
@@ -159,18 +159,7 @@ export default function MovieDetailPage() {
                 <p>{movieData.featured_song}</p>
                 </div>
                 <div>
-                <p className="text-xl font-semibold">Release date:</p>
-                <p>{movieData.release_date}</p>
-                </div>
     
-                <div>
-                <p className="text-xl font-semibold">Budget:</p>
-                <p>{movieData.budget} USD</p>
-                </div>
-    
-        
-    
-                
                 <div className="flex justify-center gap-32   mt-10"></div>
             </div>
             </div>
