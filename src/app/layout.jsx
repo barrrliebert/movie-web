@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <AiFillYoutube className="text-red-500 w-20 h-20" />
                 <div className="mt-6 lg:max-w-sm">
                   <p className="text-sm text-white">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                   </p>
                 </div>
               </div>
