@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <AiFillYoutube className="text-red-500 w-20 h-20" />
                 <div className="mt-6 lg:max-w-sm">
                   <p className="text-sm text-white">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.printing and typesetting industry. Lorem Ipsum has been the industry's standard
                   </p>
                 </div>
               </div>
