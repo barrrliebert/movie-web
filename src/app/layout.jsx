@@ -50,11 +50,17 @@ export default function RootLayout({ children }) {
               </div>
              
               <div>
-                <span className="text-base font-bold tracking-wide text-white">Download</span>
-                <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2] ">
-                  <img src="google play 1.png" alt="Google PlayStore" className='h-14 flex-shrink-0'/>       
-                  <img src="apple store 1.png" alt="App Store " className='h-14 mt-1 flex-shrink-0'/>
-                </div>
+  <span className="text-base font-bold tracking-wide text-white">Download</span>
+  <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2">
+    <div style="width: 100px; height: auto;">
+      <img src="google play 1.png" alt="Google PlayStore" className='h-14 flex-shrink-0 w-full'/>       
+    </div>
+    <div style="width: 100px; height: auto;">
+      <img src="apple store 1.png" alt="App Store" className='h-14 mt-1 flex-shrink-0 w-full'/>
+    </div>
+  </div>
+</div>
+
                
                 <p className="text-base font-bold tracking-wide text-white mt-3">Social media</p>
                 <div className="flex items-center mt-1 space-x-3">
