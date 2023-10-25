@@ -65,10 +65,6 @@ export default function RootLayout({ children }) {
                       <p className="text-xxs md:text-xs text-white">Apple Store</p>
                     </div>
                   </div>
-                <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2]">
-                  <img src="google play 1.png" alt="Google PlayStore" className='h-14'/>       
-                  <img src="apple store 1.png" alt="App Store " className='h-14 mt-1'/>
-                </div>
 
                
                 <p className="text-base font-bold tracking-wide text-white mt-3">Social media</p>
