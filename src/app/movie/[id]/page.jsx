@@ -94,13 +94,14 @@ export default function MovieDetailPage() {
 </div>
 </div>
 
-  <button className="absolute top-[502px] left-[475px] w-64 h-16 bg-transparent text-white text-2xl font-bold rounded-md border border-white">
-    Add to Watchlist
-  </button>
+<button className="absolute top-[502px] left-[475px] w-64 h-16 bg-transparent text-white text-2xl font-bold rounded-md border border-white hover:bg-gray-500 hover:text-white">
+  Add to Watchlist
+</button>
 
-  <button className="absolute top-[502px] left-[175px] w-64 h-16 bg-red-500 text-white text-2xl font-black rounded-md">
-    Watch Trailer
-  </button>
+<button className="absolute top-[502px] left-[175px] w-64 h-16 bg-red-500 text-white text-2xl font-black rounded-md hover:bg-red-700">
+  Watch Trailer
+</button>
+
   </div>
 <div className="flex justify-center gap-32   mt-10"></div>
 
