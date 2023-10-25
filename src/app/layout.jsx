@@ -50,23 +50,13 @@ export default function RootLayout({ children }) {
               </div>
               <div>
                 <span className="text-base font-bold tracking-wide text-white">Download</span>
-                <div className="flex justify-center my-2">
-                  <div className="flex items-center border rounded-lg px-1 py-1 space-x-1 mx-2">
-                    <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" className="w-4 md:w-5" />
-                    <div className="text-left">
-                      <p className="text-xs text-gray-200">Download on</p>
-                      <p className="text-xxs md:text-xs text-white">Google Play Store</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center border rounded-lg px-1 py-1 space-x-1 mx-2">
-                    <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" className="w-4 md:w-5" />
-                    <div className="text-left">
-                      <p className="text-xs text-gray-200">Download on</p>
-                      <p className="text-xxs md:text-xs text-white">Apple Store</p>
-                    </div>
-                  </div>
+                <div className="flex xl:flex-row flex-col justify-start ml-[-5px] my-2]">
+                  <img src="google play 1.png" alt="Google PlayStore" className='h-14'/>       
+                  <img src="apple store 1.png" alt="App Store " className='h-14 mt-1'/>
                 </div>
-                <p className="text-base font-bold tracking-wide text-white">Social media</p>
+
+               
+                <p className="text-base font-bold tracking-wide text-white mt-3">Social media</p>
                 <div className="flex items-center mt-1 space-x-3">
                   <a href="/" className="text-white transition-colors duration-300 hover:text-deep-purple-accent-400">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">

@@ -61,8 +61,8 @@ export default function ListMovie() {
   ))}
 </Carousel>
 
-        <h1 className="text-2xl font-bold mb-4">Browse by category</h1>
-     <div className="flex flex-col lg:flex-row items-center">
+        <h1 className="text-2xl font-bold mb-4 px-5">Browse by category</h1>
+     <div className="w-full flex justify-between items-start space-x-3 overflow-x-scroll scrollbar">
      
   <div className="flex space-x-2">
   <button
@@ -102,14 +102,16 @@ export default function ListMovie() {
       Comedy
     </button>
   </div>
-</div>
 
-<div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 justify-center sm:justify-around gap-5">
-  {data?.results?.map((item, index) => (
-    <Link href={`/movie/${item.id}`} key={item.id}>
-      <Card image={item.poster_path} overview={item.overview} id={item.id} popularity={item.popularity} title={item.title} />
-    </Link>
-  ))}
+</div>
+<div className="flex items-center justify-center mt-10">
+  <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-5">
+    {data?.results?.map((item, index) => (
+      <Link href={`/movie/${item.id}`} key={item.id}>
+        <Card image={item.poster_path} overview={item.overview} id={item.id} popularity={item.popularity} title={item.title} />
+      </Link>
+    ))}
+  </div>
 </div>
 <div className="flex justify-center mt-10">
   <ul className="flex items-center gap-4 sm:gap-28">

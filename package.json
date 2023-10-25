@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "axios": "^1.5.1",
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
