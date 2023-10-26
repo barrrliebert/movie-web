@@ -94,7 +94,7 @@ return (
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
         <p className="flex items-center flex-grow justify-center text-sm text-white">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright 2023 AkbrrID.
         </p>
       </div>
     </div>
