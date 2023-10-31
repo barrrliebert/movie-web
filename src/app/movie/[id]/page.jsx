@@ -2,6 +2,7 @@
 import { useParams } from 'next/navigation';
 import { useGetDetailMovie } from '@/hooks/useMovies';
 import { useState } from 'react';
+import { AiFillStar } from 'react-icons/ai';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function MovieDetailPage() {
@@ -28,31 +29,11 @@ return (
 
             <div className="flex items-center justify-center space-x-5 mt-[3rem] lg:mt-[8rem]">
                 <div className="flex">
-                    <svg className="w-7 sm:w-14" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 38"
-                        fill="#EBCD00">
-                        <path
-                            d="M24.5 0L30.2251 14.5106H48.7519L33.7634 23.4787L39.4885 37.9894L24.5 29.0213L9.51148 37.9894L15.2366 23.4787L0.248058 14.5106H18.7749L24.5 0Z" />
-                    </svg>
-                    <svg className="w-7 sm:w-14" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 38"
-                        fill="#EBCD00">
-                        <path
-                            d="M24.5 0L30.2251 14.5106H48.7519L33.7634 23.4787L39.4885 37.9894L24.5 29.0213L9.51148 37.9894L15.2366 23.4787L0.248058 14.5106H18.7749L24.5 0Z" />
-                    </svg>
-                    <svg className="w-7 sm:w-14" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 38"
-                        fill="#EBCD00">
-                        <path
-                            d="M24.5 0L30.2251 14.5106H48.7519L33.7634 23.4787L39.4885 37.9894L24.5 29.0213L9.51148 37.9894L15.2366 23.4787L0.248058 14.5106H18.7749L24.5 0Z" />
-                    </svg>
-                    <svg className="w-7 sm:w-14" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 38"
-                        fill="#EBCD00">
-                        <path
-                            d="M24.5 0L30.2251 14.5106H48.7519L33.7634 23.4787L39.4885 37.9894L24.5 29.0213L9.51148 37.9894L15.2366 23.4787L0.248058 14.5106H18.7749L24.5 0Z" />
-                    </svg>
-                    <svg className="w-7 sm:w-14" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 38"
-                        fill="#E4E4E4">
-                        <path
-                            d="M24.5 0L30.2251 14.5106H48.7519L33.7634 23.4787L39.4885 37.9894L24.5 29.0213L9.51148 37.9894L15.2366 23.4787L0.248058 14.5106H18.7749L24.5 0Z" />
-                    </svg>
+                    <AiFillStar className="text-yellow-500 w-14 h-14" />
+                <AiFillStar className="text-yellow-500 w-14 h-14" />
+                <AiFillStar className="text-yellow-500 w-14 h-14" />
+                <AiFillStar className="text-yellow-500 w-14 h-14" />
+                <AiFillStar className="text-yellow-500 w-14 h-14" />
                 </div>
 
                 <h5 className=" sm:text-normal text-sm font-medium mt-2">
