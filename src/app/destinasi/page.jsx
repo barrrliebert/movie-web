@@ -1,25 +1,430 @@
-"use client";
-import { useParams } from 'next/navigation';
-import { useGetDetailMovie } from '@/hooks/useMovies';
-import { useState } from 'react';
 import Link from "next/link";
+import { AiTwotoneStar } from 'react-icons/ai';
+import { SlArrowUp } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 
-export default function MovieDetailPage() {
-const params = useParams();
-const movieId = params.id;
-const movieData = useGetDetailMovie(movieId);
+const Destinasi = () => {
+    return (
+      <main className="container mx-auto relative flex -ml-10">
+      <div className="relative bg-white w-full h-[166.44rem] overflow-hidden text-left text-[0.88rem] text-text-color font-body-body-2">
+        <div className="absolute top-[12.91rem] left-[6.21rem] box-border w-[77.64rem] h-[0.06rem] border-t-[1px] border-solid border-gainsboro-100" />
+        <div className="absolute top-[0rem] left-[0.01rem] w-[90rem] h-[4.5rem]">
+          <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] bg-white shadow-[0px_4px_15px_rgba(115,_115,_115,_0.07)]" />
+          <div className="absolute top-[3.01rem] left-[11.81rem] bg-main-color w-[3.91rem] h-[0.25rem]" />
+          <div className="absolute top-[calc(50%_-_10px)] left-[6.19rem] overflow-hidden flex flex-row items-center justify-start gap-[2rem]">
+            <div className="flex flex-row items-center justify-start">
+              <div className="relative leading-[1.25rem] font-medium hover:border-red-400 hover:border-b-2">
+              <Link href="sections">
+    Beranda
+  </Link>
+              </div>
+            </div>
+            <div className="flex flex-row items-center justify-start">
+              <div className="relative leading-[1.25rem] font-medium hover:border-red-400 hover:border-b-2">
+                Destinasi
+              </div>
+            </div>
+          </div>
+          <div className="absolute top-[calc(50%_-_20px)] right-[6.25rem] overflow-hidden flex flex-row items-start justify-start gap-[0.88rem] text-center text-main-color">
+ 
+ <b className=" bg-pink-200 text-red-500 p-2 rounded-lg font-semibold font-sm font-display focus:outline-none focus:shadow-outline hover:bg-pink-300 shadow-lg px-4"><Link href="/signin">
+ Log In
+</Link></b>
 
-const [sortBy, setSortBy] = useState("all");
 
-if (!movieData) {
-return <p>Loading...</p>;
-}
+ <b className="bg-red-600 text-white p-2 rounded-lg tracking-wide font-semibold font-sm font-display focus:outline-none focus:shadow-outline hover:bg-red-900 shadow-lg px-6">Sign up</b>
 
-return (
-<main className="container mx-auto  relative -ml-10">
+</div>
+          <svg className="absolute top-[1.69rem] left-[40.99rem] w-[9.79rem] h-[1.38rem]" width="157" height="22" viewBox="0 0 157 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M145.74 22C151.815 22 156.74 17.0752 156.74 11C156.74 4.92485 151.815 0 145.74 0C139.665 0 134.74 4.92485 134.74 11C134.74 17.0752 139.665 22 145.74 22ZM143.549 8.80974L151.361 5.37866L147.93 13.1902L140.118 16.6213L143.549 8.80974Z" fill="#FF385C"/>
+<path d="M145.74 12.1365C146.437 12.1365 147.002 11.5716 147.002 10.8747C147.002 10.1778 146.437 9.61279 145.74 9.61279C145.043 9.61279 144.478 10.1778 144.478 10.8747C144.478 11.5716 145.043 12.1365 145.74 12.1365Z" fill="#FF385C"/>
+<path d="M17.7596 10.5456C17.7596 4.35951 13.9187 0.83252 8.90518 0.83252C3.86399 0.83252 0.0507812 4.35951 0.0507812 10.5456C0.0507812 16.704 3.86399 20.2587 8.90518 20.2587C13.9187 20.2587 17.7596 16.7317 17.7596 10.5456ZM13.7063 10.5456C13.7063 14.5527 11.8043 16.7224 8.90518 16.7224C5.9968 16.7224 4.10405 14.5527 4.10405 10.5456C4.10405 6.53849 5.9968 4.36874 8.90518 4.36874C11.8043 4.36874 13.7063 6.53849 13.7063 10.5456Z" fill="#282828"/>
+<path d="M20.7211 20.0001H24.7189V13.8695H28.0797C32.4284 13.8695 34.9583 11.275 34.9583 7.49871C34.9583 3.7409 32.4746 1.09104 28.1813 1.09104H20.7211V20.0001ZM24.7189 10.6656V4.35951H27.415C29.7232 4.35951 30.8404 5.61519 30.8404 7.49871C30.8404 9.373 29.7232 10.6656 27.4334 10.6656H24.7189Z" fill="#282828"/>
+<path d="M37.555 20.0001H50.3335V16.704H41.5529V12.1891H49.641V8.89289H41.5529V4.38721H50.2965V1.09104H37.555V20.0001Z" fill="#282828"/>
+<path d="M69.291 1.09104H65.3116V12.9831H65.1454L56.9835 1.09104H53.475V20.0001H57.4728V8.09886H57.6113L65.8379 20.0001H69.291V1.09104Z" fill="#282828"/>
+<path d="M71.8739 4.38721H77.663V20.0001H81.6147V4.38721H87.4038V1.09104H71.8739V4.38721Z" fill="#282828"/>
+<path d="M89.9613 20.0001H93.9592V13.297H96.8768L100.459 20.0001H104.873L100.856 12.6507C103.007 11.7274 104.199 9.85312 104.199 7.26789C104.199 3.51008 101.715 1.09104 97.4215 1.09104H89.9613V20.0001ZM93.9592 10.0839V4.35951H96.6552C98.9634 4.35951 100.081 5.38437 100.081 7.26789C100.081 9.14218 98.9634 10.0839 96.6737 10.0839H93.9592Z" fill="#282828"/>
+<path d="M111.022 1.09104H107.024V20.0001H111.022V1.09104Z" fill="#282828"/>
+<path d="M114.311 20.0001H118.309V13.8695H121.67C126.018 13.8695 128.548 11.275 128.548 7.49871C128.548 3.7409 126.064 1.09104 121.771 1.09104H114.311V20.0001ZM118.309 10.6656V4.35951H121.005C123.313 4.35951 124.43 5.61519 124.43 7.49871C124.43 9.373 123.313 10.6656 121.023 10.6656H118.309Z" fill="#282828"/>
+</svg>
 
-<div className="relative bg-default-white w-full h-[157.44rem] overflow-hidden text-left text-[1.13rem] text-text-color font-label-medium-label">
-      <div className="absolute top-[137.36rem] left-[6.25rem] w-[77.5rem] h-[13.38rem] text-[1.25rem] text-gray-1">
+<svg className="absolute top-[1.69rem] left-[17rem] w-[1.13rem] h-[1.13rem] overflow-hidden" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_3879)">
+<path d="M15.9897 15.75L12.6252 12.3795L15.9897 15.75ZM14.4897 7.875C14.4897 9.56576 13.8181 11.1873 12.6226 12.3828C11.427 13.5784 9.8055 14.25 8.11475 14.25C6.42399 14.25 4.80249 13.5784 3.60694 12.3828C2.4114 11.1873 1.73975 9.56576 1.73975 7.875C1.73975 6.18425 2.4114 4.56274 3.60694 3.36719C4.80249 2.17165 6.42399 1.5 8.11475 1.5C9.8055 1.5 11.427 2.17165 12.6226 3.36719C13.8181 4.56274 14.4897 6.18425 14.4897 7.875V7.875Z" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1_3879">
+<rect width="18" height="18" fill="white" transform="translate(0.239746)"/>
+</clipPath>
+</defs>
+</svg>
+
+        </div>
+        <b className="absolute top-[8.88rem] left-[6.26rem] text-[2.19rem] inline-block w-[17.93rem]">
+          Semua Tur
+        </b>
+        <div className="absolute top-[12.44rem] left-[6.26rem] bg-main-color w-[6.25rem] h-[0.5rem] bg-red-600" />
+        <div className="absolute top-[16.19rem] left-[25.91rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Tanjung Benoa, Bali
+          </b>
+          <img
+          
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 2.000.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">3D1N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.5</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[16.19rem] left-[45.64rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Raja Ampat, Papua
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 7.000.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+  
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.81rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">7D0N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.8</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[16.19rem] left-[65.36rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Danau Toba, Sumbar
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 2.300.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">4D1N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.4</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[57.44rem] left-[25.91rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Gunung Bromo
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover cursor-pointer"
+            alt=""
+            src="/bali.png"
+
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 1.200.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">3D1N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.5</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[57.44rem] left-[45.63rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Gunung Semeru
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 3.000.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">3D1N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.5</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[57.44rem] left-[65.34rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Gunung Sumbing
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 2.500.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">3D1N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.3</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[99rem] left-[25.91rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Desa Wae Rebo, Flores
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[22.94rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[26.31rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 5.000.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.81rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">7D0N</div>
+          </div>
+          <div className="absolute top-[26.38rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.6</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[98.69rem] left-[45.63rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Bukit Pergasingan, Lombok
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[24.63rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[28rem] left-[1.27rem] w-[10.59rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
+              Rp 5.000.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.94rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">5D1N</div>
+          </div>
+          <div className="absolute top-[28.14rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.5</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[98.69rem] left-[65.31rem] w-[18.46rem] h-[36.25rem] text-[1rem]">
+          <div className="absolute top-[0rem] left-[0.03rem] bg-white shadow-[0px_10px_40px_rgba(46,_46,_46,_0.07)] w-[18.44rem] h-[36.25rem]" />
+          <b className="absolute top-[20rem] left-[1.27rem] text-[1.38rem] inline-block w-[17.19rem]">
+            Geopark Ciletuh, Sukabumi
+          </b>
+          <img
+            className="absolute top-[0rem] left-[0rem] w-[18.44rem] h-[18.44rem] object-cover"
+            alt=""
+            src="/bali.png"
+          />
+          <div className="absolute top-[24.63rem] left-[1.27rem] text-[0.88rem] font-medium inline-block w-[15.94rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
+          <div className="absolute top-[28rem] left-[1.27rem] w-[9.4rem] h-[1.38rem] text-[1.13rem] text-main-color">
+            <b className="absolute top-[0rem] left-[0rem] inline-block w-[6.71rem]">
+              Rp 400.000
+            </b>
+            <div className="absolute top-[0.29rem] left-[6.71rem] text-[0.75rem] font-medium text-text-color">
+              / Orang
+            </div>
+          </div>
+          <div
+            className="absolute top-[31.56rem] left-[1.27rem] w-[15.94rem] h-[3.13rem] cursor-pointer text-white"
+
+          >
+            <div className="absolute top-[0rem] left-[0rem] bg-main-color w-[15.94rem] h-[3.13rem] bg-red-600" />
+            <div className="absolute top-[0.97rem] left-[4.09rem] font-semibold">
+            <Link href="movie/id">
+    Pesan Sekarang
+  </Link>
+            </div>
+          </div>
+          <div className="absolute top-[16.63rem] left-[13.96rem] bg-gray flex flex-row items-center justify-center py-[0.31rem] px-[0.94rem] text-white">
+            <div className="relative font-semibold">2D1N</div>
+          </div>
+          <div className="absolute top-[28.13rem] left-[14.59rem] w-[2.63rem] h-[1.25rem] text-[0.75rem]">
+            <b className="absolute top-[0.16rem] left-[1.38rem]">4.5</b>
+            <AiTwotoneStar
+              className="absolute top-[0rem] left-[0rem] w-[1.25rem] h-[1.25rem] overflow-hidden text-yellow-500"
+            />
+          </div>
+        </div>
+        <div className="absolute top-[137.36rem] left-[6.25rem] w-[77.5rem] h-[13.38rem] text-[1.25rem] text-gray-1">
         <div className="absolute top-[0rem] left-[19.69rem] overflow-hidden flex flex-col items-start justify-start gap-[2rem]">
           <div className="relative leading-[1.88rem] font-medium inline-block w-[10rem]">
             Company
@@ -201,263 +606,295 @@ return (
           © 2020 OPENTRIP. All rights reserved
         </div>
       </div>
-      <b className="absolute top-[13.12rem] left-[39.08rem] text-[2.81rem] inline-block w-[23.76rem]">
-        Gunung Bromo
-      </b>
-      <div className="absolute top-[8.31rem] left-[39.03rem] text-[0.88rem] text-main-color">
-        <span className="text-red-600">Destinasi</span>
-        <span className="text-darkgray-100">{` / `}</span>
-        <span className="text-red-600">Jawa Timur</span>
-      </div>
-      <div className="absolute top-[17.43rem] left-[39.08rem] text-[1rem] text-darkgray-200 inline-block w-[30.33rem]">{`Minimum Keberangkatan 10 Orang, Syarat & Ketentuan Berlaku`}</div>
-      <div className="absolute top-[21.12rem] left-[39.09rem] w-[44.68rem] h-[3.75rem]">
-        <div className="absolute top-[0rem] left-[0rem] bg-whitesmoke w-[44.68rem] h-[3.75rem] bg-gray-100" />
-        <div className="absolute top-[1.19rem] left-[0.71rem]">
-          Saturday, 29 May 2021
+        
+        <div className="absolute top-[9.79rem] left-[72.63rem] w-[11.19rem] h-[1.88rem] text-[0.63rem]">
+          <div className="absolute top-[0.53rem] left-[0rem] font-semibold">
+            Urutkan
+          </div>
+          <div className="absolute top-[0rem] left-[3.06rem] w-[8.13rem] h-[1.88rem] text-darkgray-200">
+            <div className="absolute top-[0rem] left-[0rem] rounded box-border w-[8.13rem] h-[1.88rem] border-[1px] border-solid border-gainsboro-400" />
+            <div className="absolute top-[0.53rem] left-[0.65rem]">
+              Pilih Urutan
+            </div>
+            <SlArrowDown
+              className="absolute top-[0.44rem] left-[6.69rem] w-[1rem] h-[1rem] overflow-hidden"
+            />
+          </div>
         </div>
-        <div className="absolute top-[1.19rem] left-[33.99rem] font-medium text-red-600">
-          Lihat Tanggal Lain
+        <div className="absolute top-[16.19rem] left-[7.58rem] text-[1.13rem] tracking-[0.2px] font-semibold text-red-600">
+          Filter
         </div>
-        <svg className="absolute top-[1.13rem] left-[32.13rem] w-[1.5rem] h-[1.5rem] overflow-hidden" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.4854 4H6.48535C4.27621 4 2.48535 5.79086 2.48535 8V18C2.48535 20.2091 4.27621 22 6.48535 22H18.4854C20.6945 22 22.4854 20.2091 22.4854 18V8C22.4854 5.79086 20.6945 4 18.4854 4Z" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.48535 2V6" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.4854 2V6" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.48535 10H22.4854" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg className="absolute top-[16.41rem] left-[6.26rem] w-[1rem] h-[1rem] overflow-hidden" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.98975 4.25C1.98975 4.05109 2.06876 3.86032 2.20942 3.71967C2.35007 3.57902 2.54083 3.5 2.73975 3.5H13.7397C13.9387 3.5 14.1294 3.57902 14.2701 3.71967C14.4107 3.86032 14.4897 4.05109 14.4897 4.25C14.4897 4.44891 14.4107 4.63968 14.2701 4.78033C14.1294 4.92098 13.9387 5 13.7397 5H2.73975C2.54083 5 2.35007 4.92098 2.20942 4.78033C2.06876 4.63968 1.98975 4.44891 1.98975 4.25ZM3.98975 8.25C3.98975 8.05109 4.06876 7.86032 4.20942 7.71967C4.35007 7.57902 4.54083 7.5 4.73975 7.5H11.7397C11.9387 7.5 12.1294 7.57902 12.2701 7.71967C12.4107 7.86032 12.4897 8.05109 12.4897 8.25C12.4897 8.44891 12.4107 8.63968 12.2701 8.78033C12.1294 8.92098 11.9387 9 11.7397 9H4.73975C4.54083 9 4.35007 8.92098 4.20942 8.78033C4.06876 8.63968 3.98975 8.44891 3.98975 8.25ZM5.98975 12.25C5.98975 12.0511 6.06876 11.8603 6.20942 11.7197C6.35007 11.579 6.54083 11.5 6.73975 11.5H9.73975C9.93866 11.5 10.1294 11.579 10.2701 11.7197C10.4107 11.8603 10.4897 12.0511 10.4897 12.25C10.4897 12.4489 10.4107 12.6397 10.2701 12.7803C10.1294 12.921 9.93866 13 9.73975 13H6.73975C6.54083 13 6.35007 12.921 6.20942 12.7803C6.06876 12.6397 5.98975 12.4489 5.98975 12.25Z" fill="#FF385C"/>
 </svg>
 
-      </div>
-      <div className="absolute top-[27.24rem] left-[39.09rem] w-[10.5rem] h-[1.5rem] text-[1rem]">
-        <svg className="absolute top-[0rem] left-[0rem] w-[1.5rem] h-[1.5rem] overflow-hidden" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.4854 13.8916C14.1422 13.8916 15.4854 12.5485 15.4854 10.8916C15.4854 9.23475 14.1422 7.8916 12.4854 7.8916C10.8285 7.8916 9.48535 9.23475 9.48535 10.8916C9.48535 12.5485 10.8285 13.8916 12.4854 13.8916Z" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.4854 2.8916C10.3636 2.8916 8.32882 3.73446 6.82853 5.23475C5.32824 6.73504 4.48538 8.76987 4.48538 10.8916C4.48538 12.7836 4.88738 14.0216 5.98538 15.3916L12.4854 22.8916L18.9854 15.3916C20.0834 14.0216 20.4854 12.7836 20.4854 10.8916C20.4854 8.76987 19.6425 6.73504 18.1422 5.23475C16.6419 3.73446 14.6071 2.8916 12.4854 2.8916V2.8916Z" stroke="#FF385C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-        <div className="absolute top-[0.16rem] left-[1.81rem] font-medium">
-          Titik Penjemputan
-        </div>
-      </div>
-      <div className="absolute top-[26.74rem] left-[65.34rem] w-[18.44rem] h-[2.5rem] text-[0.75rem]">
-        <div className="absolute top-[0rem] left-[0rem] rounded-lg box-border w-[18.44rem] h-[2.5rem] border-[1px] border-solid border-lightgray" />
-        <svg className="absolute h-[20.25%] w-[4.78%] top-[41%] right-[5.19%] bottom-[38.75%] left-[90.03%] max-w-full overflow-hidden max-h-full" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.7655 0.334961H0.571538C0.1758 0.334961 -0.0451706 0.730204 0.199906 1.00003L6.79689 8.23602C6.98571 8.44314 7.34931 8.44314 7.54015 8.23602L14.1371 1.00003C14.3822 0.730204 14.1612 0.334961 13.7655 0.334961Z" fill="#FF385C"/>
-</svg>
-        <div className="absolute top-[0.78rem] left-[0.97rem] font-medium">
-          Indomart Point Mall Taman Anggrek
-        </div>
-      </div>
-      
-      <img
-        className="absolute top-[30.49rem] left-[39.08rem] w-[44.76rem] h-[20.64rem] object-cover"
-        alt=""
-        src="/map.png"
-      />
-      <div className="absolute top-[54.27rem] left-[39.09rem] w-[44.69rem] h-[6.31rem]">
-        <div className="absolute top-[0rem] left-[0rem] font-medium">
-          Harga berdasarkan jumlah orang
-        </div>
-        <div className="absolute top-[3.25rem] left-[0rem] rounded-xl bg-gainsboro-100 w-[44.69rem] h-[1.25rem]" />
-        <div className="absolute top-[3.25rem] left-[0rem] rounded-xl bg-main-color w-[4.47rem] h-[1.25rem]" />
-        <div className="absolute top-[1.25rem] left-[34.1rem] w-[10.59rem] h-[1.38rem] text-red-600">
-          <b className="absolute top-[0rem] left-[0rem] inline-block w-[8.09rem]">
-            Rp 1.200.000
+          
+        <div className="absolute top-[19.5rem] left-[6.26rem] rounded-md bg-white shadow-[0px_8px_20px_rgba(48,_48,_48,_0.07)] w-[15.94rem] h-[70.94rem]" />
+        <div className="absolute top-[41.03rem] left-[6.26rem] w-[15.94rem] h-[8.07rem] text-center text-[0.75rem] text-body-text">
+          <b className="absolute top-[0.13rem] left-[0.94rem] text-[0.88rem] tracking-[0.2px] font-mulish text-left">
+            Budget
           </b>
-          <div className="absolute top-[0.29rem] left-[7.9rem] text-[0.75rem] font-medium text-black">
-            / Orang
+          <div className="absolute top-[2.48rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <div className="absolute top-[3.44rem] left-[0.94rem] w-[14.06rem] h-[2rem]">
+            <div className="absolute top-[0rem] left-[0rem] rounded-tl-md rounded-tr-none rounded-br-none rounded-bl-md bg-whitesmoke-100 w-[2rem] h-[2rem] bg-gray-100" />
+            <div className="absolute top-[0rem] left-[0rem] rounded-md box-border w-[14.06rem] h-[2rem] border-[1px] border-solid border-stroke" />
+            <div className="absolute top-[0.31rem] left-[0.56rem] leading-[1.38rem]">
+              Rp
+            </div>
+            <div className="absolute top-[0.53rem] left-[2.63rem] tracking-[0.2px] text-silver-100 text-left">
+              Budget minimum
+            </div>
           </div>
-        </div>
-        <div className="absolute top-[5.13rem] left-[0rem] text-[1rem] font-medium">{`3 dari 10 kuota sudah terisi `}</div>
-      </div>
-      <div className="absolute top-[62rem] left-[39.09rem] w-[11.88rem] h-[3.75rem] text-[1.38rem] text-black">
-        <div className="absolute top-[0rem] left-[0rem] box-border w-[11.88rem] h-[3.75rem] border-[1px] border-solid border-gainsboro-300" />
-        <div className="absolute top-[1.03rem] left-[5.59rem] font-medium">
-          1
-        </div>
-        <svg className="absolute top-[1.13rem] left-[0.66rem] w-[1.5rem] h-[1.5rem] overflow-hidden" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 11H7" stroke="#C2C2C2" stroke-width="2" stroke-linecap="round"/>
-<path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#C2C2C2" stroke-width="2"/>
-</svg>
-
-<svg className="absolute top-[1.13rem] left-[9.75rem] w-[1.5rem] h-[1.5rem] overflow-hidden" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.4854 12H8.48535M12.4854 8V12V8ZM12.4854 12V16V12ZM12.4854 12H16.4854H12.4854Z" stroke="#FF385C" stroke-width="2" stroke-linecap="round"/>
-<path d="M12.4854 22C18.0082 22 22.4854 17.5228 22.4854 12C22.4854 6.47715 18.0082 2 12.4854 2C6.9625 2 2.48535 6.47715 2.48535 12C2.48535 17.5228 6.9625 22 12.4854 22Z" stroke="#FF385C" stroke-width="2"/>
-</svg>
-
-
-      </div>
-      <div className="absolute top-[62.03rem] left-[51.59rem] bg-main-color flex flex-row items-start justify-start py-[1.25rem] px-[0.94rem] text-[1rem] text-default-white bg-red-500">
-        <div className="relative font-medium text-white">Pesan Sekarang</div>
-      </div>
-      <div className="absolute top-[73.54rem] left-[6.28rem] text-[1.5rem] font-medium text-red-600 inline-block w-[12.04rem]">
-        Detail Perjalanan
-      </div>
-      <div className="absolute top-[73.54rem] left-[21.44rem] text-[1.5rem] font-medium text-darkgray-200 inline-block w-[13.81rem]">{`Syarat & Ketentuan`}</div>
-      <div className="absolute top-[73.54rem] left-[38.38rem] text-[1.5rem] font-medium text-darkgray-200 inline-block w-[4.25rem]">
-        Galeri
-      </div>
-      <div className="absolute top-[73.54rem] left-[45.76rem] text-[1.5rem] font-medium text-darkgray-200 inline-block w-[4.89rem]">
-        Ulasan
-      </div>
-      <img
-        className="absolute top-[4.5rem] left-[0rem] w-[37.81rem] h-[61.25rem] object-cover"
-        alt=""
-        src="/bromo.png"
-      />
-      <div className="absolute top-[81.09rem] left-[6.36rem] bg-main-color w-[6.25rem] h-[6.25rem] bg-red-600" />
-      <div className="absolute top-[92.07rem] left-[6.36rem] bg-main-color w-[6.25rem] h-[6.25rem] bg-red-600" />
-      <div className="absolute top-[107.82rem] left-[6.36rem] bg-main-color w-[6.25rem] h-[6.25rem] bg-red-600" />
-      <div className="absolute top-[83.96rem] left-[8.89rem] text-[2.5rem] font-medium text-default-white">
-        1
-      </div>
-      <div className="absolute top-[94.94rem] left-[8.7rem] text-[2.5rem] font-medium text-default-white">
-        2
-      </div>
-      <div className="absolute top-[110.69rem] left-[8.67rem] text-[2.5rem] font-medium text-default-white">
-        3
-      </div>
-      <div className="absolute top-[81.84rem] left-[8.01rem] text-[1.5rem] font-medium text-default-white">
-        Hari
-      </div>
-      <div className="absolute top-[92.82rem] left-[8.01rem] text-[1.5rem] font-medium text-default-white">
-        Hari
-      </div>
-      <div className="absolute top-[108.57rem] left-[8.01rem] text-[1.5rem] font-medium text-default-white">
-        Hari
-      </div>
-      <div className="absolute top-[81.09rem] left-[18.16rem] font-medium">
-        20.30
-      </div>
-      <div className="absolute top-[92.07rem] left-[18.16rem] font-medium">
-        12.00
-      </div>
-      <div className="absolute top-[107.82rem] left-[18.16rem] font-medium">
-        03:00
-      </div>
-      <div className="absolute top-[83.71rem] left-[18.16rem] font-medium">
-        21.00
-      </div>
-      <div className="absolute top-[94.69rem] left-[18.16rem] font-medium">
-        13:00
-      </div>
-      <div className="absolute top-[116.62rem] left-[18.16rem] font-medium">
-        09:00
-      </div>
-      <div className="absolute top-[97.32rem] left-[18.16rem] font-medium">
-        13:45
-      </div>
-      <div className="absolute top-[119.24rem] left-[18.16rem] font-medium">
-        11:00
-      </div>
-      <div className="absolute top-[99.94rem] left-[18.16rem] font-medium">
-        22:00
-      </div>
-      <div className="absolute top-[121.87rem] left-[18.16rem] font-medium">
-        12:00
-      </div>
-      <div className="absolute top-[102.57rem] left-[18.16rem] font-medium">
-        22:30
-      </div>
-      <div className="absolute top-[124.49rem] left-[18.16rem] font-medium">
-        13:00
-      </div>
-      <div className="absolute top-[127.12rem] left-[18.16rem] font-medium">
-        15:00
-      </div>
-      <div className="absolute top-[129.74rem] left-[18.16rem] font-medium">
-        17:00
-      </div>
-      <div className="absolute top-[81.09rem] left-[24.72rem] font-medium">
-        Berkumpul di meeting point
-      </div>
-      <div className="absolute top-[92.07rem] left-[24.72rem] font-medium">
-        Makan Siang di Lokal Restorant (Biaya Pribadi) di meeting point
-      </div>
-      <div className="absolute top-[107.57rem] left-[24.72rem] leading-[1.88rem] font-medium inline-block w-[45.94rem]">{`Tiba di Cemoro Lawang, transfer Jeep menuju Pananjakan 1 untuk melihat Sunrise di Bromo, dilanjutkan menuju ke Lautan Pasir, menuju ke Pura dan Kawah Bromo (dapat dengan berjalan kaki atau naik kuda dengan biaya pribadi), menuju ke Savana / Bukit Teletubbies dan Pasir Berbisik `}</div>
-      <div className="absolute top-[83.71rem] left-[24.72rem] font-medium">
-        Perjalanan menuju ke Batu
-      </div>
-      <div className="absolute top-[94.69rem] left-[24.78rem] font-medium">
-        Perjalanan menuju homestay
-      </div>
-      <div className="absolute top-[116.62rem] left-[24.78rem] font-medium">
-        Perjalanan kembali menuju homestay
-      </div>
-      <div className="absolute top-[97.32rem] left-[24.78rem] font-medium">{`Tiba di Homestay untuk beristirahat & Free time (Waktu Bebas)`}</div>
-      <div className="absolute top-[119.24rem] left-[24.78rem] font-medium">
-        Tiba di Homestay untuk beristirahat
-      </div>
-      <div className="absolute top-[99.94rem] left-[24.78rem] font-medium">
-        Persiapan perjalanan menuju Bromo
-      </div>
-      <div className="absolute top-[121.87rem] left-[24.78rem] font-medium">
-        Proses Check out
-      </div>
-      <div className="absolute top-[102.57rem] left-[24.78rem] font-medium">
-        Perjalanan menuju bromo untuk melihat sunrise
-      </div>
-      <div className="absolute top-[124.49rem] left-[24.78rem] font-medium">
-        City Tour dan Sight Seeing Kota Batu
-      </div>
-      <div className="absolute top-[127.12rem] left-[24.78rem] font-medium">
-        Perjalanan menuju tempat oleh-oleh
-      </div>
-      <div className="absolute top-[129.74rem] left-[24.78rem] font-medium">
-        Perjalanan kembali ke Jakarta
-      </div>
-      <div className="absolute top-[0rem] left-[0.01rem] w-[90rem] h-[4.5rem] text-[0.88rem]">
-        <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] bg-default-white shadow-[0px_4px_15px_rgba(115,_115,_115,_0.07)]" />
-        <div className="absolute top-[3.01rem] left-[11.81rem] bg-main-color w-[3.91rem] h-[0.25rem]" />
-        <div className="absolute top-[calc(50%_-_10px)] left-[6.19rem] overflow-hidden flex flex-row items-center justify-start gap-[2rem]">
-          <div className="flex flex-row items-center justify-start">
-            <button className="relative leading-[1.25rem] font-medium hover:border-red-400 hover:border-b-2">
-            <Link href="/sections">
-    Beranda
-  </Link>
-            </button>
-          </div>
-          <div className="flex flex-row items-center justify-start">
-            <div className="relative leading-[1.25rem] font-medium hover:border-red-400 hover:border-b-2">
-            <Link href="/destinasi">
-    Destinasi
-  </Link>
+          <div className="absolute top-[6.07rem] left-[0.94rem] w-[14.06rem] h-[2rem]">
+            <div className="absolute top-[0rem] left-[0rem] rounded-tl-md rounded-tr-none rounded-br-none rounded-bl-md bg-whitesmoke-100 w-[2rem] h-[2rem] bg-gray-100" />
+            <div className="absolute top-[0rem] left-[0rem] rounded-md box-border w-[14.06rem] h-[2rem] border-[1px] border-solid border-stroke" />
+            <div className="absolute top-[0.31rem] left-[0.56rem] leading-[1.38rem]">
+              Rp
+            </div>
+            <div className="absolute top-[0.53rem] left-[2.63rem] tracking-[0.2px] text-silver-100 text-left">
+              Budget maksimum
             </div>
           </div>
         </div>
-        <div className="absolute top-[calc(50%_-_20px)] right-[6.25rem] overflow-hidden flex flex-row items-start justify-start gap-[0.88rem] text-center text-main-color">
-
-    <b className=" bg-pink-200 text-red-500 p-2 rounded-lg font-semibold font-sm font-display focus:outline-none focus:shadow-outline hover:bg-pink-300 shadow-lg px-4"><Link href="/signin">
-    Log In
-  </Link></b>
-
-    <b className="bg-red-600 text-white p-2 rounded-lg tracking-wide font-semibold font-sm font-display focus:outline-none focus:shadow-outline hover:bg-red-900 shadow-lg px-6">Sign up</b>
-
-</div>
-
-        <svg className="absolute top-[1.69rem] left-[40.99rem] w-[9.79rem] h-[1.38rem]" width="157" height="22" viewBox="0 0 157 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M145.74 22C151.815 22 156.74 17.0752 156.74 11C156.74 4.92485 151.815 0 145.74 0C139.665 0 134.74 4.92485 134.74 11C134.74 17.0752 139.665 22 145.74 22ZM143.549 8.80974L151.361 5.37866L147.93 13.1902L140.118 16.6213L143.549 8.80974Z" fill="#FF385C"/>
-<path d="M145.74 12.1365C146.437 12.1365 147.002 11.5716 147.002 10.8747C147.002 10.1778 146.437 9.61279 145.74 9.61279C145.043 9.61279 144.478 10.1778 144.478 10.8747C144.478 11.5716 145.043 12.1365 145.74 12.1365Z" fill="#FF385C"/>
-<path d="M17.7596 10.5456C17.7596 4.35951 13.9187 0.83252 8.90525 0.83252C3.86405 0.83252 0.0508423 4.35951 0.0508423 10.5456C0.0508423 16.704 3.86405 20.2587 8.90525 20.2587C13.9187 20.2587 17.7596 16.7317 17.7596 10.5456ZM13.7064 10.5456C13.7064 14.5527 11.8044 16.7224 8.90525 16.7224C5.99686 16.7224 4.10411 14.5527 4.10411 10.5456C4.10411 6.53849 5.99686 4.36874 8.90525 4.36874C11.8044 4.36874 13.7064 6.53849 13.7064 10.5456Z" fill="#282828"/>
-<path d="M20.7211 20.0001H24.719V13.8695H28.0798C32.4285 13.8695 34.9583 11.275 34.9583 7.49871C34.9583 3.7409 32.4747 1.09104 28.1813 1.09104H20.7211V20.0001ZM24.719 10.6656V4.35951H27.415C29.7233 4.35951 30.8404 5.61519 30.8404 7.49871C30.8404 9.373 29.7233 10.6656 27.4335 10.6656H24.719Z" fill="#282828"/>
-<path d="M37.5551 20.0001H50.3335V16.704H41.553V12.1891H49.641V8.89289H41.553V4.38721H50.2966V1.09104H37.5551V20.0001Z" fill="#282828"/>
-<path d="M69.2911 1.09104H65.3117V12.9831H65.1455L56.9835 1.09104H53.475V20.0001H57.4729V8.09886H57.6114L65.838 20.0001H69.2911V1.09104Z" fill="#282828"/>
-<path d="M71.874 4.38721H77.6631V20.0001H81.6148V4.38721H87.4038V1.09104H71.874V4.38721Z" fill="#282828"/>
-<path d="M89.9614 20.0001H93.9592V13.297H96.8768L100.459 20.0001H104.873L100.856 12.6507C103.008 11.7274 104.199 9.85312 104.199 7.26789C104.199 3.51008 101.715 1.09104 97.4216 1.09104H89.9614V20.0001ZM93.9592 10.0839V4.35951H96.6552C98.9635 4.35951 100.081 5.38437 100.081 7.26789C100.081 9.14218 98.9635 10.0839 96.6737 10.0839H93.9592Z" fill="#282828"/>
-<path d="M111.022 1.09104H107.024V20.0001H111.022V1.09104Z" fill="#282828"/>
-<path d="M114.311 20.0001H118.309V13.8695H121.67C126.018 13.8695 128.548 11.275 128.548 7.49871C128.548 3.7409 126.065 1.09104 121.771 1.09104H114.311V20.0001ZM118.309 10.6656V4.35951H121.005C123.313 4.35951 124.43 5.61519 124.43 7.49871C124.43 9.373 123.313 10.6656 121.023 10.6656H118.309Z" fill="#282828"/>
-</svg>
-
-<svg className="absolute top-[1.69rem] left-[17rem] w-[1.13rem] h-[1.13rem] overflow-hidden" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_4533)">
-<path d="M15.9897 15.75L12.6252 12.3795L15.9897 15.75ZM14.4897 7.875C14.4897 9.56576 13.8181 11.1873 12.6226 12.3828C11.427 13.5784 9.8055 14.25 8.11475 14.25C6.42399 14.25 4.80249 13.5784 3.60694 12.3828C2.4114 11.1873 1.73975 9.56576 1.73975 7.875C1.73975 6.18425 2.4114 4.56274 3.60694 3.36719C4.80249 2.17165 6.42399 1.5 8.11475 1.5C9.8055 1.5 11.427 2.17165 12.6226 3.36719C13.8181 4.56274 14.4897 6.18425 14.4897 7.875V7.875Z" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round"/>
+        <div className="absolute top-[50.97rem] left-[6.26rem] w-[15.94rem] h-[5.31rem] font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px]">
+            Lokasi Keberangkatan
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke " />
+          <div className="absolute top-[3.31rem] left-[0.94rem] w-[14.06rem] h-[2rem] text-[0.75rem] text-silver-100 font-body-body-2 ">
+            <div className="absolute top-[0rem] left-[0rem] rounded-tl-md rounded-tr-none rounded-br-none rounded-bl-md bg-whitesmoke-100 w-[2rem] bg-gray-100 h-[2rem]" />
+            <svg className="absolute top-[0.56rem] left-[0.56rem] w-[0.88rem] h-[0.88rem] overflow-hidden" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_4230)">
+<path d="M12.4897 12.7476L9.87287 10.1261L12.4897 12.7476ZM11.323 6.62264C11.323 7.93767 10.8006 9.19884 9.87078 10.1287C8.94091 11.0586 7.67974 11.581 6.36471 11.581C5.04967 11.581 3.7885 11.0586 2.85863 10.1287C1.92877 9.19884 1.40637 7.93767 1.40637 6.62264C1.40637 5.30761 1.92877 4.04644 2.85863 3.11657C3.7885 2.1867 5.04967 1.66431 6.36471 1.66431C7.67974 1.66431 8.94091 2.1867 9.87078 3.11657C10.8006 4.04644 11.323 5.30761 11.323 6.62264V6.62264Z" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/>
 </g>
 <defs>
-<clipPath id="clip0_1_4533">
-<rect width="18" height="18" fill="white" transform="translate(0.239746)"/>
+<clipPath id="clip0_1_4230">
+<rect width="14" height="14" fill="white" transform="translate(0.239746 0.497559)"/>
 </clipPath>
 </defs>
 </svg>
-      </div>
-    </div>
 
-</main>
-);
-}
+            <div className="absolute top-[0rem] left-[0rem] rounded-md box-border w-[14.06rem] h-[2rem] border-[1px] border-solid border-stroke" />
+            <div className="absolute top-[0.53rem] left-[2.63rem] tracking-[0.2px]">
+              Cari lokasi keberangkatan
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[58.16rem] left-[6.26rem] w-[15.94rem] h-[5.31rem] font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px] hover:border-red-400 hover:border-b-2">
+            Destinasi
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.31rem] left-[0.94rem] w-[14.06rem] h-[2rem] text-[0.75rem] text-silver-100 font-body-body-2 ">
+            <div className="absolute top-[0rem] left-[0rem] rounded-tl-md rounded-tr-none rounded-br-none rounded-bl-md bg-whitesmoke-100 w-[2rem] h-[2rem] bg-gray-100" />
+            <svg className="absolute top-[0.56rem] left-[0.56rem] w-[0.88rem] h-[0.88rem] overflow-hidden"width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_4230)">
+<path d="M12.4897 12.7476L9.87287 10.1261L12.4897 12.7476ZM11.323 6.62264C11.323 7.93767 10.8006 9.19884 9.87078 10.1287C8.94091 11.0586 7.67974 11.581 6.36471 11.581C5.04967 11.581 3.7885 11.0586 2.85863 10.1287C1.92877 9.19884 1.40637 7.93767 1.40637 6.62264C1.40637 5.30761 1.92877 4.04644 2.85863 3.11657C3.7885 2.1867 5.04967 1.66431 6.36471 1.66431C7.67974 1.66431 8.94091 2.1867 9.87078 3.11657C10.8006 4.04644 11.323 5.30761 11.323 6.62264V6.62264Z" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1_4230">
+<rect width="14" height="14" fill="white" transform="translate(0.239746 0.497559)"/>
+</clipPath>
+</defs>
+</svg>
+
+            <div className="absolute top-[0rem] left-[0rem] rounded-md box-border w-[14.06rem] h-[2rem] border-[1px] border-solid border-stroke" />
+            <div className="absolute top-[0.53rem] left-[2.63rem] tracking-[0.2px]">
+              Cari destinasi
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[73.47rem] left-[6.26rem] w-[15.94rem] h-[5.31rem] font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px]">
+            Periode Berangkat
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.31rem] left-[0.94rem] w-[14.06rem] h-[2rem] text-[0.75rem] text-silver-100 font-body-body-2">
+            <div className="absolute top-[0rem] left-[0rem] rounded-tl-md rounded-tr-none rounded-br-none rounded-bl-md bg-whitesmoke-100 w-[2rem] h-[2rem] bg-gray-100" />
+            <svg  className="absolute top-[0.56rem] left-[0.56rem] w-[0.88rem] h-[0.88rem] overflow-hidden"width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_4244)">
+<path d="M10.7397 2.83105H3.73971C2.45104 2.83105 1.40637 3.87572 1.40637 5.16439V10.9977C1.40637 12.2864 2.45104 13.3311 3.73971 13.3311H10.7397C12.0284 13.3311 13.073 12.2864 13.073 10.9977V5.16439C13.073 3.87572 12.0284 2.83105 10.7397 2.83105Z" stroke="#C0C0C0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.90637 1.66431V3.99764" stroke="#C0C0C0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.573 1.66431V3.99764" stroke="#C0C0C0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.40637 6.33105H13.073" stroke="#C0C0C0" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1_4244">
+<rect width="14" height="14" fill="white" transform="translate(0.239746 0.497559)"/>
+</clipPath>
+</defs>
+</svg>
+            <div className="absolute top-[0rem] left-[0rem] rounded-md box-border w-[14.06rem] h-[2rem] border-[1px] border-solid border-stroke" />
+            <div className="absolute top-[0.53rem] left-[2.63rem] tracking-[0.2px]">
+              Pilih tanggal keberangkatan
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[20.65rem] left-[6.26rem] w-[15.94rem] h-[6.13rem] text-body-text font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px]">
+            Tipe Perjalanan
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.31rem] left-[0.94rem] flex flex-col items-start justify-start gap-[0.94rem] text-[0.75rem] text-text-color font-body-body-2">
+            <div className="relative w-[5.19rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Open Trip
+              </div>
+            </div>
+            <div className="relative w-[5.81rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Private Trip
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[28.65rem] left-[6.25rem] w-[15.94rem] h-[10.5rem] text-body-text font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px]">
+            Tema Perjalanan
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.31rem] left-[0.94rem] flex flex-col items-start justify-start gap-[0.94rem] text-[0.75rem] text-text-color font-body-body-2">
+            <div className="relative w-[8.06rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Destinasi Populer
+              </div>
+            </div>
+            <div className="relative w-[6rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Vitamin Sea
+              </div>
+            </div>
+            <div className="relative w-[12.19rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Naik Naik ke Puncak Gunung
+              </div>
+            </div>
+            <div className="relative w-[9.88rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Menyatu Dengan Alam
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[28.65rem] left-[6.25rem] w-[15.94rem] h-[10.5rem] text-body-text font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+
+          />
+          <b className="absolute top-[0rem] left-[0.94rem] tracking-[0.2px]">
+            Tema Perjalanan
+          </b>
+          <div className="absolute top-[2.34rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.31rem] left-[0.94rem] flex flex-col items-start justify-start gap-[0.94rem] text-[0.75rem] text-text-color font-body-body-2">
+            <div className="relative w-[8.06rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Destinasi Populer
+              </div>
+            </div>
+            <div className="relative w-[6rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Vitamin Sea
+              </div>
+            </div>
+            <div className="relative w-[12.19rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Naik Naik ke Puncak Gunung
+              </div>
+            </div>
+            <div className="relative w-[9.88rem] h-[0.94rem]">
+              <div className="absolute top-[0.03rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.56rem] tracking-[0.2px] font-medium">
+                Menyatu Dengan Alam
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[65.34rem] left-[6.26rem] w-[15.94rem] h-[6.25rem] text-body-text font-mulish">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <div className="absolute top-[2.47rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <b className="absolute top-[0.13rem] left-[0.94rem] tracking-[0.2px]">
+            Rating
+          </b>
+          <div className="absolute top-[3.44rem] left-[0.94rem] flex flex-col items-start justify-start gap-[0.94rem] text-[0.75rem]">
+            <div className="relative w-[6.19rem] h-[0.94rem]">
+              <div className="absolute top-[0rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.5rem] w-[4.69rem] h-[0.94rem]">
+              <AiTwotoneStar
+                  className="absolute top-[0.09rem] left-[0rem] w-[0.75rem] h-[0.75rem] overflow-hidden text-yellow-500"
+                />
+                <b className="absolute top-[0rem] left-[1.06rem] tracking-[0.2px]">
+                  5 Bintang
+                </b>
+              </div>
+            </div>
+            <div className="relative w-[7.44rem] h-[0.94rem]">
+              <div className="absolute top-[0rem] left-[0rem] rounded-sm box-border w-[0.88rem] h-[0.88rem] border-[1px] border-solid border-silver-200" />
+              <div className="absolute top-[0rem] left-[1.5rem] w-[5.94rem] h-[0.94rem]">
+              <AiTwotoneStar
+                  className="absolute top-[0.09rem] left-[0rem] w-[0.75rem] h-[0.75rem] overflow-hidden text-yellow-500"
+                />
+                <b className="absolute top-[0rem] left-[1.06rem] tracking-[0.2px]">
+                  3 - 4 Bintang
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[80.66rem] left-[6.26rem] w-[15.94rem] h-[7.28rem] text-[0.75rem]">
+        <SlArrowUp
+            className="absolute top-[0rem] left-[13.74rem] w-[1.26rem] h-[1.25rem] text-red-600"
+          />
+          <div className="absolute top-[2.47rem] left-[-0.03rem] box-border w-[16rem] h-[0.06rem] border-t-[1px] border-solid border-stroke" />
+          <b className="absolute top-[0.13rem] left-[1rem] text-[0.88rem] tracking-[0.2px] font-mulish">
+            Durasi
+          </b>
+          <div className="absolute top-[3.91rem] left-[1rem] rounded-md box-border w-[6.72rem] h-[2rem] border-[1px] border-solid border-stroke" />
+          <div className="absolute top-[3.91rem] left-[8.34rem] rounded-md box-border w-[6.72rem] h-[2rem] border-[1px] border-solid border-stroke" />
+          <div className="absolute top-[4.44rem] left-[1.69rem] tracking-[0.2px]">
+            1
+          </div>
+          <div className="absolute top-[4.44rem] left-[8.85rem] tracking-[0.2px]">
+            10
+          </div>
+          <div className="absolute top-[4.44rem] left-[5.76rem] tracking-[0.2px]">
+            Hari
+          </div>
+          <div className="absolute top-[4.44rem] left-[12.92rem] tracking-[0.2px]">
+            Hari
+          </div>
+        </div>
+      </div>
+      </main>
+    );
+  };
+  
+  export default Destinasi;
